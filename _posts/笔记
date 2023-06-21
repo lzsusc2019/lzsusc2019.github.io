@@ -1,3 +1,12 @@
+---
+layout: post
+title: "笔记"
+date: 2023-15-24 
+description: "个人笔记"
+
+tag: hexo
+---  
+
 **注意点**
 
 修改需要主键  直接用*吧
