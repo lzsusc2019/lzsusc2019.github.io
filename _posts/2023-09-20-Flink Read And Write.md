@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "2023-09-20-Flink Read And Write"
-date: 2023-09-20 
+title: "Flink Read And Write"
+date: 2023-09-20
 description: "flink读取与写入"
 
 ## tag: Flink

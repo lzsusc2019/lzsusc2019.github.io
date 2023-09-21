@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "2023-09-20-Flink Data transformation"
-date: 2023-09-20 
+title: "Flink Data transformation"
+date: 2023-09-20
 description: "flink常用的数据转换的中间操作"
 
 ## tag: Flink
