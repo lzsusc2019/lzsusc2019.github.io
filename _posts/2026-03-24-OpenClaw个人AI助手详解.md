@@ -1,9 +1,10 @@
 ---
 layout: post
+categories: [Blog]
 title: "OpenClaw：开箱即用的个人 AI 助手架构详解"
 date: 2026-03-24
 description: "深入解析 OpenClaw 的 WebSocket 网关架构、Agent 运行时、多渠道接入原理，以及如何打造专属的 AI 代理"
-tag: [ai, agent]
+tags: [ai, agent]
 ---
 
 ## 前言

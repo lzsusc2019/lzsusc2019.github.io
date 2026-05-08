@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [Blog]
 title: "Flink Data transformation"
 date: 2023-09-20
 description: "flink常用的数据转换的中间操作"
