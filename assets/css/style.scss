@@ -1,55 +1,55 @@
 ---
 ---
 
-/* Solarized Light - 护眼暖色主题 */
+/* 代码块 - 薄荷绿背景 */
 
 .highlight pre,
 pre.highlight,
 div.highlighter-rouge,
 div.highlight {
-  background: #fdf6e3 !important;
+  background: #e8f5e9 !important;
   border-radius: 6px;
   padding: 16px;
-  border: 1px solid #eee8d5;
+  border: 1px solid #c8e6c9;
 }
 
 code.highlighter-rouge {
-  background: #fdf6e3 !important;
-  color: #657b83;
+  background: #e8f5e9 !important;
+  color: #2e7d32;
   padding: 2px 6px;
   border-radius: 3px;
   font-size: 0.85em;
 }
 
-/* Solarized Light 语法高亮色彩 */
+/* 语法高亮 - 适配绿色背景 */
 .highlight .k,
-.highlight .kd { color: #859900; }  /* 关键字 - 绿色 */
-.highlight .nc { color: #268bd2; }  /* 类名 - 蓝色 */
-.highlight .nf { color: #b58900; }  /* 函数名 - 棕色 */
-.highlight .nb { color: #859900; }  /* 内置 - 绿色 */
-.highlight .s { color: #2aa198; }   /* 字符串 - 青色 */
-.highlight .s1 { color: #2aa198; }   /* 字符串 - 青色 */
-.highlight .ss { color: #2aa198; }  /* 符号 - 青色 */
-.highlight .c { color: #93a1a1; }   /* 注释 - 灰色 */
-.highlight .c1 { color: #93a1a1; }  /* 注释 - 灰色 */
-.highlight .o { color: #586e75; }   /* 操作符 - 深灰 */
-.highlight .p { color: #657b83; }   /* 标点 - 灰蓝 */
-.highlight .n { color: #657b83; }   /* 名称 - 灰蓝 */
-.highlight .na { color: #268bd2; }  /* 属性 - 蓝色 */
-.highlight .nt { color: #268bd2; }  /* 标签名 - 蓝色 */
-.highlight .nv { color: #b58900; }  /* 变量 - 棕色 */
-.highlight .mi { color: #d33682; }  /* 数字 - 紫红 */
-.highlight .il { color: #d33682; }  /* 整数 - 紫红 */
-.highlight .mo { color: #d33682; }  /* 浮点 - 紫红 */
+.highlight .kd { color: #388e3c; }  /* 关键字 - 深绿 */
+.highlight .nc { color: #1565c0; }    /* 类名 - 蓝色 */
+.highlight .nf { color: #6a1b9a; }    /* 函数名 - 紫色 */
+.highlight .nb { color: #388e3c; }    /* 内置 - 深绿 */
+.highlight .s { color: #00838f; }     /* 字符串 - 青色 */
+.highlight .s1 { color: #00838f; }    /* 字符串 - 青色 */
+.highlight .ss { color: #00838f; }    /* 符号 - 青色 */
+.highlight .c { color: #78909c; }     /* 注释 - 灰蓝 */
+.highlight .c1 { color: #78909c; }    /* 注释 - 灰蓝 */
+.highlight .o { color: #5d4037; }    /* 操作符 - 棕色 */
+.highlight .p { color: #5d4037; }     /* 标点 - 棕色 */
+.highlight .n { color: #2e7d32; }     /* 名称 - 深绿 */
+.highlight .na { color: #1565c0; }    /* 属性 - 蓝色 */
+.highlight .nt { color: #1565c0; }    /* 标签名 - 蓝色 */
+.highlight .nv { color: #6a1b9a; }   /* 变量 - 紫色 */
+.highlight .mi { color: #c62828; }    /* 数字 - 红色 */
+.highlight .il { color: #c62828; }   /* 整数 - 红色 */
+.highlight .mo { color: #c62828; }    /* 浮点 - 红色 */
 
 /* 行号样式 */
 .highlight table {
   background: transparent;
 }
 .highlight .line_numbers {
-  color: #93a1a1;
-  background: #eee8d5;
-  border-right: 1px solid #ddd6c7;
+  color: #78909c;
+  background: #c8e6c9;
+  border-right: 1px solid #a5d6a7;
 }
 
 /* 隐藏 About 页面顶部标题 */
