@@ -1,6 +1,53 @@
 ---
 ---
 
-.post-preview .card-title {
-  text-align: center;
+/* Solarized Light - 护眼暖色主题 */
+
+.highlight pre,
+pre.highlight,
+div.highlighter-rouge,
+div.highlight {
+  background: #fdf6e3 !important;
+  border-radius: 6px;
+  padding: 16px;
+  border: 1px solid #eee8d5;
+}
+
+code.highlighter-rouge {
+  background: #fdf6e3 !important;
+  color: #657b83;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.85em;
+}
+
+/* Solarized Light 语法高亮色彩 */
+.highlight .k,
+.highlight .kd { color: #859900; }  /* 关键字 - 绿色 */
+.highlight .nc { color: #268bd2; }  /* 类名 - 蓝色 */
+.highlight .nf { color: #b58900; }  /* 函数名 - 棕色 */
+.highlight .nb { color: #859900; }  /* 内置 - 绿色 */
+.highlight .s { color: #2aa198; }   /* 字符串 - 青色 */
+.highlight .s1 { color: #2aa198; }   /* 字符串 - 青色 */
+.highlight .ss { color: #2aa198; }  /* 符号 - 青色 */
+.highlight .c { color: #93a1a1; }   /* 注释 - 灰色 */
+.highlight .c1 { color: #93a1a1; }  /* 注释 - 灰色 */
+.highlight .o { color: #586e75; }   /* 操作符 - 深灰 */
+.highlight .p { color: #657b83; }   /* 标点 - 灰蓝 */
+.highlight .n { color: #657b83; }   /* 名称 - 灰蓝 */
+.highlight .na { color: #268bd2; }  /* 属性 - 蓝色 */
+.highlight .nt { color: #268bd2; }  /* 标签名 - 蓝色 */
+.highlight .nv { color: #b58900; }  /* 变量 - 棕色 */
+.highlight .mi { color: #d33682; }  /* 数字 - 紫红 */
+.highlight .il { color: #d33682; }  /* 整数 - 紫红 */
+.highlight .mo { color: #d33682; }  /* 浮点 - 紫红 */
+
+/* 行号样式 */
+.highlight table {
+  background: transparent;
+}
+.highlight .line_numbers {
+  color: #93a1a1;
+  background: #eee8d5;
+  border-right: 1px solid #ddd6c7;
 }
