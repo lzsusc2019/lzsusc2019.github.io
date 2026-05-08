@@ -6,14 +6,49 @@
 .highlight pre,
 pre.highlight,
 div.highlighter-rouge,
-div.highlight {
+div.highlight,
+.highlight code,
+code.highlighter-rouge {
   background: #e8f5e9 !important;
   border-radius: 6px;
   padding: 16px;
   border: 1px solid #c8e6c9;
 }
 
-code.highlighter-rouge {
+.highlight,
+pre {
+  background: #e8f5e9 !important;
+}
+
+/* 强制隐藏行号 - 覆盖 Chirpy 主题样式 */
+.highlight table,
+.highlight .gutter,
+.highlight .lineNumbers,
+.highlight .line_numbers,
+.highlight .rouge-line-numbers,
+.highlight [class*="line-number"],
+.highlight [class*="line number"],
+.code-display,
+.code-display *,
+.highlighter-rouge .line-numbers,
+.highlighter-rouge .gutter {
+  display: none !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* 强制隐藏 table形式的行号容器 */
+table.rouge-highlight,
+tr.rouge-highlight,
+td.rouge-highlight,
+td.gutter {
+  display: none !important;
+}
+
+/* 单行代码 */
+code {
   background: #e8f5e9 !important;
   color: #2e7d32;
   padding: 2px 6px;
@@ -41,18 +76,6 @@ code.highlighter-rouge {
 .highlight .mi { color: #c62828; }    /* 数字 - 红色 */
 .highlight .il { color: #c62828; }   /* 整数 - 红色 */
 .highlight .mo { color: #c62828; }    /* 浮点 - 红色 */
-
-/* 行号样式 - 确保完全隐藏 */
-.highlight table,
-pre.highlight,
-.highlight pre {
-  counter-reset: line;
-}
-.highlight .line_numbers,
-.highlight .gutter,
-.code-display .line-number {
-  display: none !important;
-}
 
 /* 隐藏 About 页面顶部标题 */
 h1.dynamic-title {
