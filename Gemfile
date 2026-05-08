@@ -13,6 +13,10 @@ group :jekyll_plugins do
   gem "jekyll-spaceship"
 end
 
-group :test do
-  gem "html-proofer", "~> 5.0"
-end
+# 暂时注释掉要求高版本 Ruby 的测试工具
+# group :test do
+#   gem "html-proofer", "~> 5.0"
+# end
+
+# Ruby 3.0+ 运行 Jekyll 必需
+gem "webrick", "~> 1.8"
