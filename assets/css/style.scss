@@ -53,6 +53,6 @@ code.highlighter-rouge {
 }
 
 /* 隐藏 About 页面顶部标题 */
-.dynamic-title {
-  display: none;
+h1.dynamic-title {
+  display: none !important;
 }
