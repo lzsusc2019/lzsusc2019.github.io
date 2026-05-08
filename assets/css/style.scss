@@ -6,45 +6,31 @@
 .highlight pre,
 pre.highlight,
 div.highlighter-rouge,
-div.highlight,
-.highlight code,
-code.highlighter-rouge {
+div.highlight {
   background: #e8f5e9 !important;
   border-radius: 6px;
   padding: 16px;
   border: 1px solid #c8e6c9;
 }
 
-.highlight,
-pre {
+code.highlighter-rouge {
   background: #e8f5e9 !important;
+  color: #2e7d32;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.85em;
 }
 
-/* 强制隐藏行号 - 覆盖 Chirpy 主题样式 */
-.highlight table,
+/* 隐藏行号 - 只隐藏gutter列，保留代码内容 */
 .highlight .gutter,
-.highlight .lineNumbers,
-.highlight .line_numbers,
 .highlight .rouge-line-numbers,
-.highlight [class*="line-number"],
-.highlight [class*="line number"],
-.code-display,
-.code-display *,
-.highlighter-rouge .line-numbers,
-.highlighter-rouge .gutter {
-  display: none !important;
-  visibility: hidden !important;
-  width: 0 !important;
-  height: 0 !important;
-  overflow: hidden !important;
-}
-
-/* 强制隐藏 table形式的行号容器 */
-table.rouge-highlight,
-tr.rouge-highlight,
-td.rouge-highlight,
+.highlight .line_numbers,
+.highlight .lineNumbers,
 td.gutter {
   display: none !important;
+  width: 0 !important;
+  padding: 0 !important;
+  border: none !important;
 }
 
 /* 单行代码 */
