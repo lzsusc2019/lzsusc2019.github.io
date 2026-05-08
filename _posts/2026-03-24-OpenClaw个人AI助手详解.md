@@ -2,6 +2,7 @@
 layout: post
 title: "OpenClaw：开箱即用的个人 AI 助手架构详解"
 date: 2026-03-24
+categories: [AI工具]
 description: "深入解析 OpenClaw 的 WebSocket 网关架构、Agent 运行时、多渠道接入原理，以及如何打造专属的 AI 代理"
 tags: [AI, AGENT]
 permalink: /posts/20260324-openclaw--ai/
@@ -193,10 +194,10 @@ OpenClaw 的强大之处在于**统一的消息抽象层**，让你可以通过�
 ### 5.1 安装
 
 ```bash
-# 全局安装
+## 全局安装
 npm install -g openclaw@latest
 
-# 运行配置向导
+## 运行配置向导
 openclaw onboard --install-daemon
 ```
 
@@ -209,10 +210,10 @@ openclaw gateway --port 18789 --verbose
 ### 5.3 发送消息
 
 ```bash
-# 通过 CLI 发送
+## 通过 CLI 发送
 openclaw message send --to +1234567890 --message "Hello from OpenClaw"
 
-# 与 Agent 对话
+## 与 Agent 对话
 openclaw agent --message "帮我整理今天的待办事项" --thinking high
 ```
 
@@ -279,13 +280,13 @@ Agent: [通过 Node 调用摄像头]
 ### 7.3 调试技巧
 
 ```bash
-# 查看状态
+## 查看状态
 openclaw status
 
-# 查看会话
+## 查看会话
 openclaw sessions --json
 
-# 健康检查
+## 健康检查
 openclaw doctor
 ```
 

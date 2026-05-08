@@ -1,39 +1,42 @@
-# Chirpy Starter
+# 个人技术博客
 
-[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
-[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+基于 [Jekyll Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) 主题构建的极简、高性能技术博客。
 
-A minimal, ready-to-use template for creating a blog with the [**Chirpy**][chirpy] Jekyll theme. Get up and running in minutes with all critical files pre-configured.
+## 🎯 核心理念 (Philosophy)
+本项目遵循 **“快速回想 (Quick Recall)”** 风格：
+- **高效检索**：侧边栏精准分类（AI、Java、中间件、算法）。
+- **去冗余化**：文章开篇即核心模板与操作口诀。
+- **视觉驱动**：精美代码高亮与层次分明的标题设计。
 
-## Why This Starter Exists
+## 🛠️ 技术栈
+- **主题**: Jekyll-Theme-Chirpy (Remote Theme 模式)
+- **渲染引擎**: GitHub Actions (自动构建与部署)
+- **语法高亮**: Rouge
+- **增强功能**: Jekyll Spaceship (数学公式、流程图、表格增强)
 
-When installing Chirpy through [RubyGems.org][gem], Jekyll can only read a subset of theme files (`_data`, `_layouts`, `_includes`, `_sass`, `assets`) and limited `_config.yml` options from the gem. As a result, users cannot enjoy the full out-of-the-box experience that Chirpy offers.
+## 💻 本地启动 (Local Development)
 
-To unlock all features, the following files must be present in your Jekyll site:
+由于 Chirpy 主题对 Ruby 版本有严格要求 (>= 3.1)，推荐使用以下一键启动命令：
 
-```shell
-.
-├── _config.yml
-├── _plugins
-├── _tabs
-└── index.html
+```bash
+# 进入项目目录并自动配置环境、安装依赖、启动预览
+cd lzsusc2019.github.io/ && \
+export PATH="$(brew --prefix ruby@3.3)/bin:$PATH" && \
+bundle install && \
+bundle exec jekyll serve
 ```
+访问地址: `http://127.0.0.1:4000`
 
-This starter bundles those files from the latest **Chirpy** release along with a [CD][CD] workflow, so you can start writing immediately.
+## 🌐 远端配置 (Deployment)
 
-## Usage
+### 1. 自动部署
+项目已接入 **GitHub Actions**。每当您执行 `git push` 到 `main` 分支时，系统会自动执行：
+- 环境校验 -> 静态资源编译 -> 部署至 `gh-pages` 分支。
 
-Check out the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
+### 2. 关键配置
+所有的站点参数均在 `_config.yml` 中定义，包括：
+- `remote_theme`: 确保云端 Layout 渲染正常。
+- `permalink`: 解决了中文路径导致的 404 问题。
 
-## Contributing
-
-This repository is automatically updated with new releases from the theme repository. If you encounter any issues or want to contribute to its improvement, please visit the [theme repository][chirpy] to provide feedback.
-
-## License
-
-This work is published under [MIT][mit] License.
-
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+---
+*更多开发规范详见项目根目录下的 [GEMINI.md](./GEMINI.md)*

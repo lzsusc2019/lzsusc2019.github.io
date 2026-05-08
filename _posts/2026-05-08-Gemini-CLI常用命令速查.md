@@ -1,243 +1,101 @@
 ---
+title: "Gemini CLI 常用命令速查手册"
+date: 2026-05-08 10:00:00 +0800
+categories: [AI工具,CLI]
+tags: [AI, CLI, Productivity]
+permalink: /posts/gemini-cli-commands/
 layout: post
-title: "Gemini CLI 内部命令详解"
-date: 2026-05-08
-description: "全面介绍 Gemini CLI 内部的常用命令，包括 /resume、/quit、/help 等核心操作"
-tags: [AI, CLI]
-permalink: /posts/20260508-gemini-cli-commands/
 ---
 
-## 前言
+> **快速回想**：Gemini CLI 启动后，所有以 `/` 开头的指令都是内部控制命令。记住 `/help` 是你最好的朋友。
+{: .prompt-info }
 
-Gemini CLI 启动后，在交互界面中输入 `/` 开头的命令来控制对话、管理文件、调用工具。
+## 一、 会话控制 (Session Management)
 
----
+### 1. 恢复与切换
+- **列出所有历史会话**：
+  ```bash
+  /sessions
+  ```
+- **恢复指定会话**（支持 ID 简写）：
+  ```bash
+  /resume [session-id]
+  ```
+- **开启全新对话**：
+  ```bash
+  /new
+  ```
 
-## 一、退出与停止
-
-### 退出 CLI
-
-```
-/quit
-```
-
-或直接输入：
-
-```
-/exit
-```
-
-### 停止当前生成
-
-```
-Ctrl + C
-```
-
-当 AI 正在输出时，按此组合键立即中断。
+### 2. 退出与中断
+- **退出程序**：`/quit` 或 `/exit`
+- **强行中断生成**：`Ctrl + C`
+{: .prompt-warning }
 
 ---
 
-## 二、恢复与切换会话
+## 二、 文件与代码操作 (File I/O)
 
-### 恢复上一个会话
-
-```
-/resume
-```
-
-### 恢复指定会话
-
-```
-/sessions
+### 1. 读取代码
+> 将外部文件内容喂给 AI 的最快方式。
+```bash
+/read src/main/java/UserService.java
 ```
 
-先查看所有会话，找到 `session-id`：
-
+### 2. 快速写入
+> 进入多行模式，输入内容后按 **Ctrl + D** 保存退出。
+```bash
+/write config.json
+## ... 编辑内容 ...
+## [Ctrl + D]
 ```
-/resume def456
-```
-
-### 切换会话
-
-```
-/switch
-```
-
-交互式选择切换到其他历史会话。
-
-### 新建会话
-
-```
-/new
-```
+{: .prompt-tip }
 
 ---
 
-## 三、文件操作
+## 三、 配置与模型切换 (Configuration)
 
-### 读取文件
-
-```
-/read <file-path>
-```
-
-栗子：
-
-```
-/read README.md
-/read src/main.java
+### 1. 切换大脑 (Model)
+根据任务复杂度选择模型：
+```bash
+/model gemini-2.5-pro   # 处理复杂架构与逻辑
+/model gemini-2.0-flash # 追求极致响应速度
 ```
 
-### 写入文件
+### 2. 状态检查
+- **查看当前所有配置**：`/config`
+- **查看 Token 消耗**：`/tokens`
+- **对话健康检查**：`/doctor`
 
-```
-/write <file-path>
-```
+---
 
-进入多行模式，输入完成后按 `Ctrl + D` 保存。
+## 四、 核心工具管理 (Toolbelt)
 
-```
-/write output.txt
-# 输入内容...
-# Ctrl + D 保存
-```
-
-### 编辑文件
-
-```
-/edit <file-path>
+### 1. 插件开关
+```bash
+/tools status           # 查看当前插件状态
+/tools enable web_search # 开启联网搜索
+/tools disable web_fetch # 关闭网页抓取
 ```
 
 ---
 
-## 四、工具管理
+## 五、 常用命令汇总表
 
-### 查看工具列表
-
-```
-/tools
-```
-
-### 启用工具
-
-```
-/tools enable web_search
-/tools enable web_fetch
-```
-
-### 禁用工具
-
-```
-/tools disable web_search
-```
-
-### 查看工具状态
-
-```
-/tools status
-```
+| 命令 | 分类 | 功能描述 |
+| :--- | :--- | :--- |
+| `/resume` | 会话 | 恢复上一次对话进度 |
+| `/clear` | 界面 | 清理当前屏幕缓存 |
+| `/history` | 记录 | 回溯本次对话的所有消息 |
+| `/retry` | 纠错 | 让 AI 重新回答上一个问题 |
+| `/think` | 模式 | 开启 Chain-of-Thought 深度思考 |
+| `/export` | 导出 | 将对话保存为 .md 文件 |
 
 ---
 
-## 五、配置相关
+## 💡 典型工作流示例
 
-### 查看当前配置
-
-```
-/config
-```
-
-### 切换模型
-
-```
-/model gemini-2.5-pro
-```
-
-常用模型：
-
-| 模型 | 场景 |
-|------|------|
-| `gemini-2.5-pro` | 复杂推理 |
-| `gemini-2.0-flash` | 快速响应 |
-
-### 设置温度
-
-```
-/temperature 0.7
-```
-
-### 设置系统指令
-
-```
-/system 你是一个代码审查专家
-```
-
----
-
-## 六、信息查询
-
-| 命令 | 功能 |
-|------|------|
-| `/help` | 显示帮助 |
-| `/history` | 查看消息历史 |
-| `/tokens` | 查看 Token 使用量 |
-| `/session` | 查看当前会话信息 |
-
----
-
-## 七、其他命令
-
-| 命令 | 功能 |
-|------|------|
-| `/clear` | 清屏 |
-| `/retry` | 重发上一条消息 |
-| `/think` | 开启深度思考 |
-| `/export` | 导出对话为 Markdown |
-| `/doctor` | 健康检查 |
-
----
-
-## 八、典型场景
-
-### 场景一：续上昨天的对话
-
-```
-$ gemini
-> /sessions
-> /resume def456
-```
-
-### 场景二：读取代码并审查
-
-```
-> /read src/service/UserService.java
-> 这段代码有什么问题？
-```
-
-### 场景三：保存输出到文件
-
-```
-> /write result.json
-> { "status": "ok" }
-> Ctrl + D
-```
-
----
-
-## 九、命令速查
-
-```
-退出相关：    /quit, /exit, Ctrl+C
-会话管理：    /resume, /sessions, /switch, /new
-文件操作：    /read, /write, /edit
-工具管理：    /tools, /tools enable/disable
-配置相关：    /config, /model, /temperature, /system
-信息查询：    /help, /history, /tokens, /session
-其他：        /clear, /retry, /think, /export, /doctor
-```
-
----
-
-## 参考资料
-
-- [Gemini CLI 官方文档](https://ai.google.dev/gemini-api/docs)
+### 场景：代码审查并导出建议
+1. **读取代码**：`/read Controller.java`
+2. **发起提问**：`请分析这段代码的并发安全问题。`
+3. **开启思考**：`/think` (如果需要更深度的回答)
+4. **导出记录**：`/export review_result.md`
