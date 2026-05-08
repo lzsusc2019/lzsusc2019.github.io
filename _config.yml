@@ -21,12 +21,22 @@ social:
 # Sidebar settings
 avatar: /assets/img/avatar.jpg
 toc: true
+sidebar:
+  - categories
+  - tags
+  - archives
 
 # PWA
 pwa:
   enabled: true
 
 paginate: 10
+
+# --- Collections ---
+collections:
+  tabs:
+    output: true
+    sort_by: order
 
 # --- Defaults ---
 defaults:
