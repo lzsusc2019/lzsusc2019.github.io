@@ -1,0 +1,61 @@
+# The Site Configuration
+theme: jekyll-theme-chirpy
+lang: zh-CN
+timezone: Asia/Shanghai
+
+title: LZS's Technical Blog
+tagline: 探索后端开发、人工智能与算法之美
+description: >-
+  LZS 的个人技术博客，记录关于分布式系统、AI 代理与高效编程的思考。
+
+url: "https://lzsusc2019.github.io"
+github:
+  username: lzsusc2019
+
+social:
+  name: LZS
+  email: lzsusc2019@github.com
+  links:
+    - https://github.com/lzsusc2019
+
+# Sidebar settings
+avatar: /assets/img/avatar.jpg
+toc: true
+
+# PWA
+pwa:
+  enabled: true
+
+paginate: 10
+baseurl: ""
+
+# --- Defaults ---
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      comments: true
+      toc: true
+      permalink: /posts/:title/
+  - scope:
+      path: ""
+      type: tabs
+    values:
+      layout: page
+      permalink: /:title/
+
+# --- Build settings ---
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-archives
+  - jekyll-feed
