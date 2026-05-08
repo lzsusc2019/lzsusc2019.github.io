@@ -10,6 +10,9 @@ permissions:
   pages: write
   id-token: write
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true # 解决您看到的 Node.js 20 警告
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,18 +23,17 @@ jobs:
           fetch-depth: 0
 
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
 
       - name: Setup Ruby
-        uses: actions/setup-ruby@v1
+        uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.3
-
-      - name: Install dependencies
-        run: bundle install
+          bundler-cache: true
 
       - name: Build
-        run: bundle exec jekyll b -d "_site"
+        run: |
+          bundle exec jekyll b -d "_site"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

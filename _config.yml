@@ -27,7 +27,7 @@ pwa:
   enabled: true
 
 paginate: 10
-baseurl: ""
+baseurl: "https://lzsusc2019.github.io"
 
 # --- Defaults ---
 defaults:
