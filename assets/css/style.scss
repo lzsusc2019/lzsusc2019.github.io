@@ -51,3 +51,8 @@ code.highlighter-rouge {
   background: #eee8d5;
   border-right: 1px solid #ddd6c7;
 }
+
+/* 隐藏 About 页面顶部标题 */
+.page-header .page-title {
+  display: none;
+}

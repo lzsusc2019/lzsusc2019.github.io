@@ -1,11 +1,11 @@
 ---
 layout: page
-title:
+title: 
 icon: fas fa-info-circle
 order: 1
 permalink: /about/
 ---
-
+## 关于我
 我是 LZS，后端开发工程师，专注于分布式系统与 AI 代理技术。
 
 ## 技术栈
