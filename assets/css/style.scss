@@ -42,14 +42,16 @@ code.highlighter-rouge {
 .highlight .il { color: #c62828; }   /* 整数 - 红色 */
 .highlight .mo { color: #c62828; }    /* 浮点 - 红色 */
 
-/* 行号样式 */
-.highlight table {
-  background: transparent;
+/* 行号样式 - 确保完全隐藏 */
+.highlight table,
+pre.highlight,
+.highlight pre {
+  counter-reset: line;
 }
-.highlight .line_numbers {
-  color: #78909c;
-  background: #c8e6c9;
-  border-right: 1px solid #a5d6a7;
+.highlight .line_numbers,
+.highlight .gutter,
+.code-display .line-number {
+  display: none !important;
 }
 
 /* 隐藏 About 页面顶部标题 */
