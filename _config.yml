@@ -3,7 +3,7 @@ theme: jekyll-theme-chirpy
 lang: zh-CN
 timezone: Asia/Shanghai
 
-title: 刘泽圣的技术笔记
+title: LZS 的技术笔记
 tagline: 后端架构 · 分布式系统 · AI Agent
 description: >-
   记录后端平台架构、分布式系统与 AI Agent 工程化的实践与思考。
@@ -12,9 +12,9 @@ description: >-
 url: "https://lzsusc2019.github.io"
 baseurl: ""
 
-author: 刘泽圣
+author: LZS
 social:
-  name: 刘泽圣
+  name: LZS
   email: 15974286796@163.com
   links:
     - https://github.com/lzsusc2019
