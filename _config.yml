@@ -85,3 +85,13 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
   - jekyll-spaceship
+
+# --- jekyll-spaceship 覆盖 ---
+# mathjax-processor 默认注入 https://polyfill.io/v3/polyfill.min.js?features=es6。
+# 该域名 2024 年被转手后曾用于投递恶意脚本（供应链攻击），现已被封禁且请求失败；
+# 现代浏览器亦无需该 ES6 polyfill。此处只保留 MathJax 本体。
+# 注：deep_merge 对数组是「替换」语义，故仅列需要的即可。
+jekyll-spaceship:
+  mathjax-processor:
+    src:
+      - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
