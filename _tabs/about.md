@@ -40,7 +40,8 @@ permalink: /about/
 ## 联系方式
 
 - GitHub：[lzsusc2019](https://github.com/lzsusc2019)
-- Email：[15974286796@163.com](mailto:15974286796@163.com)
+
+> 需要邮件联系，请点左侧栏的邮件图标。
 
 ---
 
