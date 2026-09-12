@@ -1,8 +1,8 @@
 ---
 title: "Gemini CLI 常用命令速查手册"
 date: 2026-05-08 10:00:00 +0800
-categories: [AI工具,CLI]
-tags: [AI, CLI]
+categories: [AI 工具]
+tags: [AI, CLI, 效率工具]
 permalink: /posts/gemini-cli-commands/
 layout: post
 ---

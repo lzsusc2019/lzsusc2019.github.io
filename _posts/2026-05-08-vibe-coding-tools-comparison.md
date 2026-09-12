@@ -1,8 +1,8 @@
 ---
 title: "谁在制造 Vibe Coding 幻觉？四款热门 AI 编程工具的真实生态位"
 date: 2026-05-08 16:00:00 +0800
-categories: [AI, 效率工具]
-tags: [Vibe Coding, Cursor, Claude Code, Gemini CLI, OpenCode, Copilot]
+categories: [AI 工具]
+tags: [Vibe Coding, Cursor, Claude Code, 效率工具]
 permalink: /posts/vibe-coding-tools-comparison/
 layout: post
 ---

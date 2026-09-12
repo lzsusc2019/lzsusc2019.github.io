@@ -1,8 +1,8 @@
 ---
 title: "深度研报：Harness Engineering 的演进与控制大模型的工程实践"
 date: 2026-05-08 17:00:00 +0800
-categories: [AI, 架构设计]
-tags: [Harness Engineering, Agent, AI编程, 架构]
+categories: [AI Agent]
+tags: [Harness Engineering, Agent, 架构设计]
 permalink: /posts/harness-engineering-deep-dive/
 layout: post
 ---

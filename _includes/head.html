@@ -46,11 +46,16 @@
   {% endif %}
 
   <title>
+    {%- comment -%}
+      原实现用 page.title 查语言包，而语言包的键是英文（about/archives/…），
+      中文标题（「关于」「归档」「精选」）查不到，会渲染出空标题 "| 站点名"。
+      改为与 sidebar.html 一致：用 URL 段查表，并回退到 page.title。
+    {%- endcomment -%}
     {%- unless page.layout == 'home' -%}
       {%- capture title -%}
         {%- if page.collection == 'tabs' -%}
-          {%- assign tab_key = page.title | downcase -%}
-          {{- site.data.locales[include.lang].tabs[tab_key] -}}
+          {%- assign tab_key = page.url | remove_first: '/' | split: '/' | first -%}
+          {{- site.data.locales[include.lang].tabs[tab_key] | default: page.title -}}
         {%- else -%}
           {{- page.title -}}
         {%- endif -%}

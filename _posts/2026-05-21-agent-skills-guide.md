@@ -1,4 +1,11 @@
-# Agent Skills 使用指南
+---
+title: "Agent Skills 使用指南：为 AI 编程代理构建工程技能库"
+date: 2026-05-21 10:00:00 +0800
+categories: [AI Agent]
+tags: [Agent Skills, Agent, 工程化, 工具链]
+permalink: /posts/agent-skills-guide/
+layout: post
+---
 
 > 为 AI 编程代理打造的生产级工程技能库
 

@@ -3,18 +3,19 @@ theme: jekyll-theme-chirpy
 lang: zh-CN
 timezone: Asia/Shanghai
 
-title: LZS
-tagline: # 已删除副标题
+title: 刘泽圣的技术笔记
+tagline: 后端架构 · 分布式系统 · AI Agent
 description: >-
-  LZS 的个人技术博客，专注于后端开发、分布式系统与 AI 代理。
+  记录后端平台架构、分布式系统与 AI Agent 工程化的实践与思考。
+  涵盖调度与配置平台、密钥与安全治理、Agent Runtime 与多智能体协作。
 
 url: "https://lzsusc2019.github.io"
 baseurl: ""
 
-author: LZS
+author: 刘泽圣
 social:
-  name: LZS
-  email: lzsusc2019@github.com
+  name: 刘泽圣
+  email: 15974286796@163.com
   links:
     - https://github.com/lzsusc2019
 

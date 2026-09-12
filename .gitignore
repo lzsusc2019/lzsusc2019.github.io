@@ -25,3 +25,6 @@ package-lock.json
 # Misc
 _sass/vendors
 assets/js/dist
+
+# 个人内容营销 agent 定义（与博客无关，不公开）
+_agents/
